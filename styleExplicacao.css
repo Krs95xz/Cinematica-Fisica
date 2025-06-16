@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    top: 0;
+    padding: 0;
+    text-align: justify;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 20px;
+    background-color: rgb(233, 233, 233);
+}
+table {
+    margin: 0 auto;
+    padding: 10px;
+}
+th {
+    text-align: center;
+    padding: 5px;
+}
+td {
+    text-align: justify;
+    padding: 8px;
+}
+aside {
+    color: white;
+    text-align: center;
+    background-color: black;
+}
+button {
+    min-width: 100px;
+    border-radius: 10px;
+    min-height: 40px;
+}
+button:hover {
+    animation: transicao 2s;
+    min-width: 200px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+@keyframes transicao {
+    from {
+        min-width: 100px;
+    }
+    to {
+        min-width: 200px;
+    }
+}
