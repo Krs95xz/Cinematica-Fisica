@@ -91,7 +91,7 @@ function soltarBolinha() {
 
             const s = s0 + (v0 * t) + (0.5 * a * Math.pow(t, 2));
 
-            const finalX = inicialX + s * Math.cos(angulo);
+            const finalX = inicialX + s * Math.sin(angulo);
             const finalY = inicialY + s * Math.sin(angulo);
             bolinha.style.left = finalX + "px";
             bolinha.style.top = finalY + "px";
@@ -112,9 +112,9 @@ function soltarBolinha() {
             return;
         }
 
-        const sAtual = s0 + (v0 * tempoD) + (0.5 * a * Math.pow(tempoD, 2));
+        const sAtual = s0 + (v0 * tempoD) + (0.5 * a * Math.pow(tempoD, 2)) * 1000;
         const s = s0 + (v0 * t) + (0.5 * a * Math.pow(t, 2));
-        document.getElementById("posicao").textContent = `Posição final: ${s} m`
+        document.getElementById("posicao").textContent = `Posição final: ${s.toFixed(2)} m`
 
         const novoX = inicialX + sAtual * Math.cos(radianos);
         const novoY = inicialY + sAtual * Math.sin(radianos);
